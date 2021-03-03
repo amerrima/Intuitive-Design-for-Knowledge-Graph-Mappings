@@ -13,21 +13,19 @@
 
 <script>
 export default {
+    props:{
+        file:{
+            type: Object,
+            default: function(){
+                return{}
+            }
+        }
+    },
     data: () => ({
-        json: {
-            id: 1,
-            name: "A green door",
-            price: 12.5,
-            tags: ["home", "green"],
-            test: "test fdgajkhfsdjghadkjghadfkjghbadfkjhgadfg",
-            still: "testing woop",
-            Wow: "yup the pup",
-            Dogs: "I like dogs",
-
-        },
+        
     }),
     created() {
-        this.json = JSON.stringify(this.json, null, 2);
+        this.file = JSON.stringify(this.file, null, 2);
     },
 
     watch: {
